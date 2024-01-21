@@ -1,28 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css');
+//mixins
+@mixin flex-center {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 }
 
-body {
-	font-size: 1rem;
+html {
+	font-size: 16px;
 	font-family: 'Montserrat', sans-serif;
+	overflow-x: hidden;
+}
+
+body {
+	width: 100vw;
 }
 
 .wrapper {
-	position: fixed;
-	top: 0;
-	left: 0;
+	margin: 0 auto;
 	width: 100%;
+}
+
+.hero-img {
+	position: relative;
 	display: flex;
-	justify-content: space-around;
+	background-image: url(/dist/img/jungle.webp);
+	background-size: cover;
+	background-position: center;
 	align-items: center;
-	background-color: #fff;
-	z-index: 10;
+	height: 45vh;
+
+	&__shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.7);
+	}
+
+	&__text {
+		color: white;
+		z-index: 1;
+		text-align: left;
+		width: 80%;
+		font-size: 1.5rem;
+
+		p {
+			color: white;
+		}
+	}
 }
 
 .nav {
+	position: sticky;
+	top: 0;
+	background-color: #fff;
+	z-index: 20;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 	&-items {
 		list-style: none;
 		display: flex;
@@ -65,12 +107,82 @@ body {
 	}
 }
 
+.aboutus {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	width: 80%;
+	height: auto;
+	&-content {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+	&-title {
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: 300;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+	}
+	&-img {
+		width: 23em;
+		height: 16em;
+		background-size: cover;
+		background-position: 50%;
+		margin: 1em 0;
+	}
+	&-text {
+		width: 23em;
+		margin: 1em 2em;
+		line-height: 1.5em;
+		color: #333;
+		&__title {
+			margin-bottom: 1em;
+			font-weight: 700;
+		}
+		&__content {
+			color: gray;
+			text-align: justify;
+		}
+	}
+}
+
+.adventure {
+	&-img {
+		position: relative;
+		background-image: url(/dist/img/girl.webp);
+		background-size: cover;
+		background-position: center;
+		align-items: center;
+		height: 35vh;
+		&__shadow {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.7);
+		}
+		&__text {
+			color: #fff;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			border: 1px solid #fff;
+			padding: 1em 4em;
+			width: 60%;
+			text-align: center;
+			h2{
+				font-weight: 400;
+			}
+		}
+	}
+}
+
 //mobile
 @media screen and (max-width: 660px) {
 	.wrapper {
 		justify-content: space-between;
 		padding: 0.5rem;
-		z-index: 10;
 	}
 	.logo {
 		padding: 0;
@@ -79,8 +191,9 @@ body {
 		display: none;
 	}
 	.mobilemenu {
-		position: absolute;
+		position: fixed;
 		left: -150%;
+		top: 0;
 		list-style: none;
 		display: flex;
 		flex-direction: column;
@@ -89,22 +202,44 @@ body {
 		width: 100vw;
 		height: 100vh;
 		background-color: #ffffff;
-		animation: closeMenu 0.2s;
+		animation: closeMenu 0.4s;
 		z-index: 0;
 		&-icon {
+			width: 50px;
+			height: 50px;
 			display: block;
 			margin: 0;
 			padding: 0;
 			border: none;
 			background: none;
 			cursor: pointer;
+			&__open {
+				background-image: url(/dist/img/menu.svg);
+				background-repeat: no-repeat;
+				background-position: 50%;
+				opacity: 1;
+			}
+			&__close {
+				background-image: url(/dist/img/close.svg);
+				background-repeat: no-repeat;
+				background-position: 50%;
+				opacity: 1;
+				z-index: 50;
+			}
 		}
 
 		&-active {
 			display: flex;
 			left: 0;
-			z-index: -1;
-			animation: openMenu 0.5s;
+			z-index: 50;
+			animation: openMenu 0.4s;
+		}
+	}
+
+	.aboutus {
+		&-text {
+			text-align: center;
+			margin: 1em 0;
 		}
 	}
 }
@@ -124,5 +259,14 @@ body {
 	}
 	to {
 		left: -150%;
+	}
+}
+
+@keyframes btnOpacity {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
 	}
 }
