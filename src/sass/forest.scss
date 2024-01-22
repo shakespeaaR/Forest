@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
-@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css');
-//mixins
+@import './colors';
 @mixin flex-center {
 	display: flex;
 	justify-content: space-between;
@@ -14,13 +13,16 @@
 }
 
 html {
-	font-size: 16px;
-	font-family: 'Montserrat', sans-serif;
-	overflow-x: hidden;
+	scroll-behavior: smooth;
+	scroll-snap-type: y proximity;
+	scroll-padding-top: 50px;
 }
 
 body {
-	width: 100vw;
+	width: 100%;
+	min-width: 275px;
+	font-size: 16px;
+	font-family: 'Montserrat', sans-serif;
 }
 
 .wrapper {
@@ -30,9 +32,9 @@ body {
 
 .nav {
 	position: fixed;
-	width: 100vw;
+	width: 100%;
 	top: 0;
-	background-color: #fff;
+	background-color: $background;
 	z-index: 20;
 	display: flex;
 	justify-content: space-around;
@@ -47,12 +49,12 @@ body {
 		}
 		&__itemlink {
 			text-decoration: none;
-			color: #000;
+			color: $textFooter;
 			font-size: 1.2rem;
-			transition: color 0.8s, background-color 0.8s;
+			transition: color 0.3s, background-color 0.3s;
 			&:hover {
-				background-color: #000;
-				color: #fff;
+				background-color: $navBackground;
+				color: $textWhite;
 			}
 		}
 	}
@@ -66,7 +68,7 @@ body {
 	background-position-y: 70%;
 	align-items: center;
 	height: 45vh;
-
+	margin-top: 70px;
 	&__shadow {
 		position: absolute;
 		width: 100%;
@@ -82,7 +84,7 @@ body {
 		font-size: 1.5rem;
 
 		p {
-			color: white;
+			color: $textWhite;
 		}
 	}
 }
@@ -96,7 +98,7 @@ body {
 	&-companyname {
 		font-size: 1.7rem;
 		margin-left: 0.5rem;
-		color: #000;
+		color: $textLogo;
 	}
 }
 
@@ -104,7 +106,6 @@ body {
 	&-icon {
 		display: none;
 		font-size: 2rem;
-		color: #000;
 	}
 }
 
@@ -125,7 +126,7 @@ body {
 		padding-bottom: 2rem;
 	}
 	&-img {
-		width: 28em;
+		width: 28rem;
 		height: auto;
 		background-size: cover;
 		background-position: 50%;
@@ -134,13 +135,13 @@ body {
 	&-text {
 		width: 33em;
 		line-height: 1.5em;
-		color: #333;
+		color: $textGrey;
 		&__title {
 			margin-bottom: 1em;
 			font-weight: 700;
 		}
 		&__content {
-			color: gray;
+			color: $textGrey;
 			text-align: justify;
 		}
 	}
@@ -161,12 +162,12 @@ body {
 			background-color: rgba(0, 0, 0, 0.7);
 		}
 		&__text {
-			color: #fff;
+			color: $textWhite;
 			position: absolute;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
-			border: 1px solid #fff;
+			border: 1px solid $textWhite;
 			padding: 1em 4em;
 			width: 60%;
 			text-align: center;
@@ -196,7 +197,7 @@ body {
 		align-items: center;
 	}
 	&-card {
-		box-shadow: 0 1px 6px grey;
+		box-shadow: 0 1px 6px $textGrey;
 		border-radius: 6px;
 		margin: 0.8em;
 		width: 16em;
@@ -220,54 +221,126 @@ body {
 		text-shadow: 1px 1px 1px;
 		margin-right: 0.2rem;
 		&__inpacket {
-			color: greenyellow;
+			color: $btnColor;
 		}
 		&__outpacket {
-			color: gray;
+			color: $textGrey;
 			text-decoration: line-through;
 		}
 	}
 
 	&-outpacket {
-		color: gray;
+		color: $textGrey;
 		text-decoration: line-through;
 	}
 
 	&-choose {
-		background-color: white;
-		color: black;
-		border: none;
+		color: $textGrey;
+		background-color: $background;
+		border: 1px solid $textFooter;
 		font-weight: bold;
 		text-transform: uppercase;
 		border-radius: 4px;
-		box-shadow: rgba(0, 0, 0, 1) 0 2px 4px 0;
 		cursor: pointer;
 		padding: 10px 35px;
 		text-align: center;
-		transition: transform 150ms, box-shadow 150ms, box-shadow 150ms;
+		transition: transform 0.3s, box-shadow 0.3s, box-shadow 0.3s, background-color 0.3s;
 		&__choosen {
-			background-color: #00db5f;
-			color: black;
+			background-color: $btnColor;
+			color: $textGrey;
 		}
 		&:hover {
 			box-shadow: none;
-			background-color: #00db5f;
+			background-color: $btnColor;
 			transform: scale(1.2);
 		}
 	}
 }
 
-//mobile
-@media screen and (max-width: 660px) {
-	.wrapper {
-		justify-content: space-between;
+.footer {
+	background-color: $footerBGC;
+	color: $textGrey;
+	width: 100%;
+	margin-top: 5rem;
+	&-boxes {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+		width: 80vw;
+	}
+	&-boxleft {
+		display: flex;
+		align-items: flex-start;
+		font-size: 2.2rem;
+		padding: 2rem 0.5rem;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: center;
+	}
+	&-boxright {
+		display: flex;
+		justify-content: space-around;
+		&__column {
+			padding: 2rem 1.5rem;
+		}
+	}
+	&-logo {
+		width: 40px;
+		height: auto;
+		margin-right: 0.5rem;
+	}
+	ul {
+		list-style: none;
+		margin-top: 0.5rem;
+	}
+	li {
+		padding: 0.5rem 0;
+		transition: color 0.3s;
+		font-weight: 500;
+		cursor: pointer;
+		&:hover {
+			color: $btnColor;
+		}
+	}
+	&-author {
+		display: flex;
+		justify-content: center;
 		padding: 0.5rem;
+		border-top: 3px solid $textFooter;
+	}
+}
+
+//mobile
+@media screen and (max-width: 1075px) {
+	.aboutus {
+		&-content {
+			justify-content: center;
+			flex-wrap: wrap;
+			flex-direction: column;
+			align-content: center;
+		}
+		&-text {
+			text-align: center;
+			margin-top: 2rem;
+		}
+	}
+}
+
+@media screen and (max-width: 660px) {
+	.adventure-img__text {
+		width: 80%;
 	}
 	.logo {
 		padding: 0;
 	}
-	.nav-items {
-		display: none;
+	.hero-img {
+		margin-top: 50px;
+	}
+	.nav {
+		height: 50px;
+		&-items {
+			display: none;
+		}
 	}
 	.mobilemenu {
 		position: fixed;
@@ -315,11 +388,71 @@ body {
 		}
 	}
 
-	.aboutus {
-		&-text {
-			text-align: center;
-			margin: 1em 0;
+	.footer {
+		background-color: $footerBGC;
+		color: $textGrey;
+		width: 100%;
+		margin-top: 5rem;
+		&-boxes {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			width: 80vw;
 		}
+	}
+	.aboutus {
+		&-content {
+			align-items: center;
+		}
+		&-img {
+			//width: 18rem;
+			margin: 0;
+		}
+		&-text {
+			width: 80%;
+		}
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.aboutus {
+		&-content {
+			align-items: center;
+		}
+		&-img {
+			width: 100%;
+			margin: 0;
+		}
+		&-text {
+			width: 80%;
+			&__content {
+				text-align: center;
+			}
+		}
+	}
+
+	.footer {
+		&-boxright {
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			&__column {
+				padding: 0.5rem;
+				text-align: center;
+			}
+		}
+	}
+	.hero-img__text {
+		width: 90%;
+		font-size: 1rem;
+	}
+	.adventure-img__text {
+		width: 100%;
+		padding: 0.5rem 2rem;
+	}
+	.footer-author {
+		text-align: center;
 	}
 }
 
