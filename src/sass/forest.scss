@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 @import './colors';
+
 @mixin flex-center {
 	display: flex;
 	justify-content: space-between;
@@ -15,10 +16,11 @@
 html {
 	scroll-behavior: smooth;
 	scroll-snap-type: y proximity;
-	scroll-padding-top: 50px;
+	scroll-padding-top: 70px;
 }
 
 body {
+	position: relative;
 	width: 100%;
 	min-width: 275px;
 	font-size: 16px;
@@ -58,6 +60,11 @@ body {
 			}
 		}
 	}
+}
+
+.active {
+	background-color: $navBackground;
+	color: $textWhite;
 }
 
 .hero-img {
@@ -257,6 +264,22 @@ body {
 	}
 }
 
+.more-offers {
+	margin-top: 5rem;
+	text-transform: uppercase;
+
+	a {
+		text-decoration: none;
+		color: $btnColor;
+		font-weight: 700;
+		text-decoration: underline;
+		transition: background-color 0.3s;
+		&:hover {
+			background-color: $textGrey;
+		}
+	}
+}
+
 .footer {
 	background-color: $footerBGC;
 	color: $textGrey;
@@ -266,7 +289,7 @@ body {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-around;
-		width: 80vw;
+		width: 80%;
 	}
 	&-boxleft {
 		display: flex;
@@ -310,7 +333,84 @@ body {
 	}
 }
 
-//mobile
+.contact {
+	&-headtitle {
+		text-align: center;
+		margin-top: 5rem;
+		p {
+			margin-top: 1.5rem;
+		}
+	}
+	&-container {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		margin-top: 5rem;
+	}
+	&-box {
+		margin-right: 1rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 35%;
+		border-radius: 5%;
+		label {
+			color: $textGrey;
+			margin-left: 1rem;
+			font-weight: 500;
+		}
+		input {
+			font-size: 18px;
+			padding: 8px px;
+			outline: none;
+			width: 100%;
+			height: 30px;
+			background: #ffffff;
+			color: #000000;
+			border: 1px solid #4b4b4b;
+			border-radius: 6px;
+			margin-bottom: 1.5rem;
+		}
+		textarea {
+			font-size: 18px;
+			padding: 8px 8px;
+			outline: none;
+			width: 100%;
+			background: #ffffff;
+			color: #000000;
+			border: 1px solid #4b4b4b;
+			border-radius: 6px;
+			resize: none;
+		}
+		&__headtitle {
+			margin-bottom: 2rem;
+			text-align: center;
+		}
+	}
+	.form-button {
+		margin-top: 2rem;
+		width: 100%;
+	}
+}
+
+.address-box {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-left: 1rem;
+	width: 40%;
+	&__headtitle {
+		margin-bottom: 2rem;
+	}
+	&__mapbox {
+		width: 100%;
+		height: 500px;
+		min-width: 240px;
+		border: none;
+	}
+}
+
 @media screen and (max-width: 1075px) {
 	.aboutus {
 		&-content {
@@ -326,7 +426,7 @@ body {
 	}
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 750px) {
 	.adventure-img__text {
 		width: 80%;
 	}
@@ -351,7 +451,7 @@ body {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		width: 100vw;
+		width: 100%;
 		height: 100vh;
 		background-color: #ffffff;
 		animation: closeMenu 0.4s;
@@ -366,7 +466,7 @@ body {
 			background: none;
 			cursor: pointer;
 			&__open {
-				background-image: url(../img/menu.svg);
+				background-image: url('../img/menu.svg');
 				background-repeat: no-repeat;
 				background-position: 50%;
 				opacity: 1;
@@ -398,7 +498,7 @@ body {
 			flex-direction: column;
 			flex-wrap: wrap;
 			justify-content: space-around;
-			width: 80vw;
+			width: 80%;
 		}
 	}
 	.aboutus {
@@ -412,6 +512,21 @@ body {
 		&-text {
 			width: 80%;
 		}
+	}
+	.contact {
+		&-container {
+			flex-direction: column;
+			align-items: center;
+		}
+		&-box {
+			margin: 0;
+			width: 80%;
+		}
+	}
+	.address-box {
+		margin: 0;
+		margin-top: 3rem;
+		width: 80%;
 	}
 }
 

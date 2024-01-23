@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/65fab7c86b.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="dist/css/forest.min.css">
+</head>
+
+<body>
+    <nav class="nav" id="navid">
+    <a class="logo" href="index.html#home"></href>
+        <img class="logo-icon" src="dist/img/treelogo.svg" alt="Forest Company Group logo. Forest Tree Icon">
+        <span class="logo-companyname">Forest</span>
+    </a>
+    <ul class="nav-items mobilemenu" role="tablist">
+        <a class="nav-items__itemlink" href="index.html#home">
+            <li class="nav-items__item">Home</li>
+        </a>
+        <a class="nav-items__itemlink" href="index.html#aboutus">
+            <li class="nav-items__item">O nas</li>
+        </a>
+        <a class="nav-items__itemlink" href="index.html#offer">
+            <li class="nav-items__item">Oferta</li>
+        </a>
+        <a class="nav-items__itemlink" href="contact.html">
+            <li class="nav-items__item">Kontakt</li>
+        </a>
+    </ul>
+    <button class="mobilemenu-icon mobilemenu-icon__open"></button>
+</nav>
+<header id="home" class="section">
+    <div class="hero-img">
+        <div class="hero-img__shadow"></div>
+        <div class="hero-img__text wrapper">
+            <p>Forest Group</p>
+            <h2>Najpiękniejszy park w Twojej okolicy!</h2>
+        </div>
+    </div>
+</header>
+    <div class="contact wrapper">
+    <div class="contact-headtitle">
+        <h2>Kontakt</h2>
+        <p>Jeśli masz jakieś pytania. Skontaktuj się z nami za pomocą formularza poniżej.</p>
+    </div>
+    <div class="contact-container">
+        <div class="contact-box">
+            <h4 class="contact-box__headtitle">Formularz Kontaktowy</h4>
+            <form>
+                <label for="namesurrname"><i class="fas fa-user"></i> Imię i nazwisko:</label>
+                <input type="text" id="namesurrname" name="namesurrname" required>
+
+                <label for="email"><i class="fas fa-envelope"></i> Adres email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message"><i class="fas fa-comment"></i> Treść wiadomości:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit" class="offer-choose form-button">Wyślij</button>
+            </form>
+        </div>
+        <div class="address-box">
+            <h4 class="address-box__headtitle">Znajdziesz nas tu!</h4>
+            <iframe class="address-box__mapbox"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.898232406824!2d19.892844200000003!3d50.088192199999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165a326d015c3b%3A0x47a12cd367a1f34e!2sRestauracja%20McDonald&#39;s!5e0!3m2!1spl!2spl!4v1706042056605!5m2!1spl!2spl"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</div>
+    <footer class="footer" id="footer">
+    <div class="footer-boxes wrapper">
+        <div class="footer-boxleft"><img class="footer-logo" src="dist/img/treelogo.svg"
+                alt="Forest Company Group logo. Forest Tree Icon">Forest
+        </div>
+        <div class="footer-boxright">
+            <div class="footer-boxright__column">
+                <h4>O nas</h4>
+                <ul>
+                    <li>Historia</li>
+                    <li>Parki</li>
+                    <li>Opinie</li>
+                </ul>
+            </div>
+            <div class="footer-boxright__column">
+                <h4>Nasza firma</h4>
+                <ul>
+                    <li>Praca</li>
+                    <li>Kadry</li>
+                    <li>Zarząd</li>
+                </ul>
+            </div>
+            <div class="footer-boxright__column">
+                <h4>Dokumenty</h4>
+                <ul>
+                    <li>Wnioski</li>
+                    <li>Rezerwacje</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-author">
+        <p>©<span class="year"></span> Forest Group Company Ltd.</p>
+    </div>
+</footer>
+    <script src="dist/js/main.min.js"></script>
+</body>
+
+</html>
