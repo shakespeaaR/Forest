@@ -13,7 +13,7 @@ const browserSync = require('browser-sync').create()
 const webp = require('imagemin-webp')
 const extReplace = require('gulp-ext-replace')
 const reload = browserSync.reload
-const projectName = "Wallboyz"
+const projectName = 'Wallboyz'
 
 const paths = {
 	html: './html/**/*.kit',
@@ -55,7 +55,7 @@ function convertImages(done) {
 			imagemin([
 				webp({
 					// lossless: true, if pngs turn out sucky uncomment this and redo just pngs
-					quality: 100,
+					quality: 80,
 				}),
 			])
 		)

@@ -4,7 +4,7 @@ const footerYear = document.querySelector('.year')
 const navMenuLink = document.querySelectorAll('.nav-items__itemlink')
 
 const scrollSpy = new bootstrap.ScrollSpy(document.body, {
-	target: '#navbar-example',
+	target: '#navid',
 })
 
 const openCloseMenu = () => {

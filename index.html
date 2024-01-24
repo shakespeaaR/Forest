@@ -4,17 +4,16 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description"
+        content="Zanurz się w niezwykłym świecie natury, odkryj urok i magię tego, co uważamy za najpiękniejszy park leśny - Forest. Ten uroczy zakątek przyrody to prawdziwe królestwo drzew, gdzie otulające zieleń lasu spotyka się z delikatnym szumem liści, tworząc niezapomnianą symfonię natury. Spacerując malowniczymi ścieżkami, doświadczysz harmonii między dziką przyrodą a ludzką eksploracją. Forest to nie tylko park leśny, to podróż do serca natury, gdzie każdy krok otwiera przed tobą pełen życia mikrokosmos leśnego ekosystemu. Odkryj spokój w objęciach drzew, czerp energię z zielonego pulsu lasu i pozwól, aby Forest stał się miejscem, gdzie czar przyrody staje się rzeczywistością.">
     <meta name="robots" content="index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Forest - najpiękniejszy park leśny</title>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/65fab7c86b.js" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 <link rel="stylesheet" href="dist/css/forest.min.css">
 </head>
@@ -22,24 +21,23 @@
 <body data-bs-spy="scroll" data-bs-target="#navid">
     <nav class="nav" id="navid">
     <a class="logo" href="index.html#home"></href>
-        <img class="logo-icon" src="dist/img/treelogo.svg" alt="Forest Company Group logo. Forest Tree Icon">
-        <span class="logo-companyname">Forest</span>
+        <span class="logo-companyname"><i class="bi bi-tree-fill"></i>Forest</span>
     </a>
     <ul class="nav-items mobilemenu" role="tablist">
-        <a class="nav-items__itemlink" href="index.html#home">
-            <li class="nav-items__item">Home</li>
-        </a>
-        <a class="nav-items__itemlink" href="index.html#aboutus">
-            <li class="nav-items__item">O nas</li>
-        </a>
-        <a class="nav-items__itemlink" href="index.html#offer">
-            <li class="nav-items__item">Oferta</li>
-        </a>
-        <a class="nav-items__itemlink" href="contact.html">
-            <li class="nav-items__item">Kontakt</li>
-        </a>
+        <li class="nav-items__item" role="tab">
+            <a class="nav-items__itemlink" href="index.html#home">Strona główna</a>
+        </li>
+        <li class="nav-items__item" role="tab">
+            <a class="nav-items__itemlink" href="index.html#aboutus">O nas</a>
+        </li>
+        <li class="nav-items__item" role="tab">
+            <a class="nav-items__itemlink" href="index.html#offer">Oferta</a>
+        </li>
+        <li class="nav-items__item" role="tab">
+            <a class="nav-items__itemlink" href="contact.html">Kontakt</a>
+        </li>
     </ul>
-    <button class="mobilemenu-icon mobilemenu-icon__open"></button>
+    <button class="mobilemenu-icon mobilemenu-icon__open" aria-label="Menu mobilne"></button>
 </nav>
 <header id="home" class="section">
     <div class="hero-img">
@@ -54,7 +52,8 @@
     <section class="aboutus wrapper" id="aboutus">
         <h2 class="aboutus-title">O nas</h2>
         <div class="aboutus-content">
-            <img src="dist/img/waters.webp" alt="Kamienna wyspa z drzewkiem na jeziorze w lesie." class="aboutus-img">
+            <img src="dist/img/waters.webp" width="1200px" height="600px"
+                alt="Kamienna wyspa z drzewkiem na jeziorze w lesie." class="aboutus-img">
             <div class="aboutus-text">
                 <h2 class="aboutus-text__title">Niezapomniane przygody</h2>
                 <p class="aboutus-text__content">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo
@@ -84,19 +83,19 @@
                 <span class="offer-card__price">$0</span>
                 <ul class="offer-card__list">
                     <li class="offer-card__list-item inpacket"><i
-                            class="fa-solid fa-check offer-icon offer-icon__inpacket"></i>opcja w
+                            class="bi bi-check offer-icon offer-icon__inpacket"></i>opcja w
                         pakiecie</li>
                     <li class="offer-card__list-item inpacket"><i
-                            class="fa-solid fa-check offer-icon offer-icon__inpacket"></i>opcja w
+                            class="bi bi-check offer-icon offer-icon__inpacket"></i>opcja w
                         pakiecie</li>
                     <li class="offer-card__list-item offer-outpacket"><i
-                            class="fa-solid fa-check offer-icon offer-icon__outpacket"></i>opcja
+                            class="bi bi-check offer-icon offer-icon__outpacket"></i>opcja
                         poza pakietem</li>
                     <li class="offer-card__list-item offer-outpacket"><i
-                            class="fa-solid fa-check offer-icon offer-icon__outpacket"></i>opcja
+                            class="bi bi-check offer-icon offer-icon__outpacket"></i>opcja
                         poza pakietem</li>
                     <li class="offer-card__list-item offer-outpacket"><i
-                            class="fa-solid fa-check offer-icon offer-icon__outpacket"></i>opcja
+                            class="bi bi-check offer-icon offer-icon__outpacket"></i>opcja
                         poza pakietem</li>
                 </ul>
                 <button class="offer-choose">Wybierz</button>
@@ -106,19 +105,19 @@
                 <span class="offer-card__price">$99</span>
                 <ul class="offer-card__list">
                     <li class="offer-card__list-item offer-inpacket"><i
-                            class="fa-solid fa-check offer-icon offer-icon__inpacket"></i>opcja w
+                            class="bi bi-check offer-icon offer-icon__inpacket"></i>opcja w
                         pakiecie</li>
                     <li class="offer-card__list-item offer-inpacket"><i
-                            class="fa-solid fa-check offer-icon offer-icon__inpacket"></i>opcja w
+                            class="bi bi-check offer-icon offer-icon__inpacket"></i>opcja w
                         pakiecie</li>
                     <li class="offer-card__list-item offer-inpacket"><i
-                            class="fa-solid fa-check offer-icon offer-icon__inpacket"></i>opcja w
+                            class="bi bi-check offer-icon offer-icon__inpacket"></i>opcja w
                         pakiecie</li>
                     <li class="offer-card__list-item offer-outpacket"><i
-                            class="fa-solid fa-check offer-icon offer-icon__outpacket"></i>opcja
+                            class="bi bi-check offer-icon offer-icon__outpacket"></i>opcja
                         poza pakietem</li>
                     <li class="offer-card__list-item offer-outpacket"><i
-                            class="fa-solid fa-check offer-icon offer-icon__outpacket"></i>opcja
+                            class="bi bi-check offer-icon offer-icon__outpacket"></i>opcja
                         poza pakietem</li>
                 </ul>
                 <button class="offer-choose offer-choose__choosen">Wybierz</button>
@@ -128,19 +127,19 @@
                 <span class="offer-card__price">$299</span>
                 <ul class="offer-card__list">
                     <li class="offer-card__list-item inpacket"><i
-                            class="fa-solid fa-check offer-icon offer-icon__inpacket"></i>opcja w
+                            class="bi bi-check offer-icon offer-icon__inpacket"></i>opcja w
                         pakiecie</li>
                     <li class="offer-card__list-item inpacket"><i
-                            class="fa-solid fa-check offer-icon offer-icon__inpacket"></i>opcja w
+                            class="bi bi-check offer-icon offer-icon__inpacket"></i>opcja w
                         pakiecie</li>
                     <li class="offer-card__list-item inpacket"><i
-                            class="fa-solid fa-check offer-icon offer-icon__inpacket"></i>opcja w
+                            class="bi bi-check offer-icon offer-icon__inpacket"></i>opcja w
                         pakiecie</li>
                     <li class="offer-card__list-item inpacket"><i
-                            class="fa-solid fa-check offer-icon offer-icon__inpacket"></i>opcja w
+                            class="bi bi-check offer-icon offer-icon__inpacket"></i>opcja w
                         pakiecie</li>
                     <li class="offer-card__list-item inpacket"><i
-                            class="fa-solid fa-check offer-icon offer-icon__inpacket"></i>opcja w
+                            class="bi bi-check offer-icon offer-icon__inpacket"></i>opcja w
                         pakiecie</li>
                 </ul>
                 <button class="offer-choose">Wybierz</button>
@@ -151,8 +150,7 @@
 </main>
     <footer class="footer" id="footer">
     <div class="footer-boxes wrapper">
-        <div class="footer-boxleft"><img class="footer-logo" src="dist/img/treelogo.svg"
-                alt="Forest Company Group logo. Forest Tree Icon">Forest
+        <div class="footer-boxleft"><i class="bi bi-tree-fill"></i>Forest
         </div>
         <div class="footer-boxright">
             <div class="footer-boxright__column">

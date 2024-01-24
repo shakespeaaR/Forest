@@ -1,3 +1,4 @@
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 @import './colors';
 
@@ -16,7 +17,7 @@
 html {
 	scroll-behavior: smooth;
 	scroll-snap-type: y proximity;
-	scroll-padding-top: 70px;
+	scroll-padding-top: 50px;
 }
 
 body {
@@ -44,15 +45,13 @@ body {
 	&-items {
 		list-style: none;
 		display: flex;
-		&__item {
-			padding: 1.4rem;
-			width: 120px;
-			text-align: center;
-		}
 		&__itemlink {
-			text-decoration: none;
+			padding: 1.4rem;
 			color: $textFooter;
+			text-align: center;
 			font-size: 1.2rem;
+			font-weight: 500;
+			text-decoration: none;
 			transition: color 0.3s, background-color 0.3s;
 			&:hover {
 				background-color: $navBackground;
@@ -249,8 +248,9 @@ body {
 		text-transform: uppercase;
 		border-radius: 4px;
 		cursor: pointer;
-		padding: 10px 35px;
+		padding: 15px 40px;
 		text-align: center;
+		transform: scale(0.8);
 		transition: transform 0.3s, box-shadow 0.3s, box-shadow 0.3s, background-color 0.3s;
 		&__choosen {
 			background-color: $btnColor;
@@ -259,7 +259,7 @@ body {
 		&:hover {
 			box-shadow: none;
 			background-color: $btnColor;
-			transform: scale(1.2);
+			transform: scale(1);
 		}
 	}
 }
@@ -269,13 +269,12 @@ body {
 	text-transform: uppercase;
 
 	a {
-		text-decoration: none;
-		color: $btnColor;
+		color: #00602a;
 		font-weight: 700;
 		text-decoration: underline;
 		transition: background-color 0.3s;
 		&:hover {
-			background-color: $textGrey;
+			background-color: $navBackground;
 		}
 	}
 }
@@ -354,9 +353,11 @@ body {
 		justify-content: center;
 		width: 35%;
 		border-radius: 5%;
+		i {
+			font-size: 1.2rem;
+		}
 		label {
 			color: $textGrey;
-			margin-left: 1rem;
 			font-weight: 500;
 		}
 		input {
@@ -370,6 +371,7 @@ body {
 			border: 1px solid #4b4b4b;
 			border-radius: 6px;
 			margin-bottom: 1.5rem;
+			margin-top: 0.5rem;
 		}
 		textarea {
 			font-size: 18px;
@@ -380,6 +382,7 @@ body {
 			color: #000000;
 			border: 1px solid #4b4b4b;
 			border-radius: 6px;
+			margin-top: 0.5rem;
 			resize: none;
 		}
 		&__headtitle {
@@ -435,6 +438,7 @@ body {
 	}
 	.hero-img {
 		margin-top: 50px;
+		background-image: url(../img/junglesmall.webp);
 	}
 	.nav {
 		height: 50px;
@@ -485,6 +489,9 @@ body {
 			left: 0;
 			z-index: 50;
 			animation: openMenu 0.4s;
+		}
+		.nav-items__item {
+			margin: 2.4rem;
 		}
 	}
 
